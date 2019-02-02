@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Atlantida.Models;
+using Atlantida.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,10 @@ namespace Atlantida
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.Configure<MongoConnectionSettings>(options => Configuration.GetSection("MongoDb").Bind(options));
+
+            services.AddTransient<INoteRepository, NoteRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
