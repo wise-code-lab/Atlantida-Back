@@ -20,7 +20,7 @@ Open [https://localhost:5000/api/values](https://localhost:5000/api/values) or [
 
 #
 
-In the `Atlantida.Tests` and `Atlantida.IntegrationTests` directory, you can run:
+In the `Atlantida.Tests` and `Atlantida.IntegrationTests` directories, you can run:
 
 ### `dotnet test`
 
