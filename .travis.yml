@@ -2,7 +2,8 @@ language: csharp
 mono: none
 dist: xenial
 dotnet: 2.2
-script:
+install:
   - dotnet restore
+script:
   - dotnet build
   - dotnet test Atlantida.Tests/Atlantida.Tests.csproj
