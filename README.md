@@ -1,4 +1,4 @@
-# Atlantida-Back 
+# Atlantida-Back [![Build Status](https://travis-ci.org/wise-code-lab/Atlantida-Back.svg?branch=master)](https://travis-ci.org/wise-code-lab/Atlantida-Back)
 
 ## Available Scripts
 
