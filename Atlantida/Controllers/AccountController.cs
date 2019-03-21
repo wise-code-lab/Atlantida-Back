@@ -108,6 +108,9 @@ namespace Atlantida.Controllers
                 return BadRequest(result);
             }
 
+            // Should we add Guest role as default role? 
+            await _userManager.AddToRoleAsync(user, Role.Guest);
+
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
 
